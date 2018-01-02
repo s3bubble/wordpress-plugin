@@ -1,0 +1,3 @@
+.s3bubble-audio-oembed-iframes, .s3bubble-video-oembed-iframes {
+    width:100%;
+}

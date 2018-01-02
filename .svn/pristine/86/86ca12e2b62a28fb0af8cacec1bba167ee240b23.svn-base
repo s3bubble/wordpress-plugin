@@ -1,0 +1,116 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: S3Bubble Amazon Web Services Media Streaming\n"
+"POT-Creation-Date: 2017-07-27 18:38+0100\n"
+"PO-Revision-Date: 2017-07-27 18:39+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: s3bubble-oembed.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: s3bubble-oembed.php:502
+msgid "Fast, Reliable, Secure Media Streaming Powered by Amazon Web Services"
+msgstr ""
+"Rapides, fiables et sécurisés de médias en Streaming alimenté par Amazon Web "
+"Services"
+
+#: s3bubble-oembed.php:507
+msgid "S3Bubble Links"
+msgstr "Liens S3Bubble"
+
+#: s3bubble-oembed.php:510
+msgid "Roll back to old plugin"
+msgstr "Revenir à l’ancien plugin"
+
+#: s3bubble-oembed.php:510
+msgid "Old Plugin Download"
+msgstr "Télécharger plugin / extention"
+
+#: s3bubble-oembed.php:510
+msgid "Switching Video Tutorial"
+msgstr "Commutation vidéo tutoriel"
+
+#: s3bubble-oembed.php:512
+msgid "Sign up for a S3Bubble account at"
+msgstr "Inscrivez-vous pour un compte S3Bubble à"
+
+#: s3bubble-oembed.php:514
+msgid "VIEW ONLINE DOCUMENTATION"
+msgstr "Documentation en ligne"
+
+#: s3bubble-oembed.php:517
+msgid "Simply add your shortcode in any post or page with your video id or ids"
+msgstr ""
+"Il suffit d’ajouter votre shortcode dans n’importe quel poste ou la page "
+"avec votre id de la vidéo ou des ID"
+
+#: s3bubble-oembed.php:518
+msgid "Video"
+msgstr "Vidéo"
+
+#: s3bubble-oembed.php:520
+msgid "Audio"
+msgstr "Audio"
+
+#: s3bubble-oembed.php:522
+msgid "Video/Audio Modal"
+msgstr "Audio/Video Modal"
+
+#: s3bubble-oembed.php:524
+msgid "YouTube"
+msgstr "YouTube"
+
+#: s3bubble-oembed.php:526
+msgid "Live Streaming"
+msgstr "Streaming en direct"
+
+#: s3bubble-oembed.php:529
+msgid "Too create a playlist simply add your playlist id"
+msgstr ""
+"Aussi créer une playlist il suffit d’ajouter votre id de liste de lecture"
+
+#: s3bubble-oembed.php:530
+msgid "Video Playlist"
+msgstr "Playlist Vidéo"
+
+#: s3bubble-oembed.php:532
+msgid "Audio Playlist"
+msgstr "Liste de lecture audio"
+
+#: s3bubble-oembed.php:540
+msgid "Must Watch Setup Video"
+msgstr "Doit regarder la vidéo d’installation"
+
+#: s3bubble-oembed.php:551
+msgid "Switch over to a Self Hosted Setup"
+msgstr "Basculer vers une configuration libre hébergée"
+
+#. Plugin Name of the plugin/theme
+msgid "S3Bubble Amazon Web Services Media Streaming"
+msgstr "S3Bubble Amazon Web Services médias en Streaming"
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://s3bubble.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "S3Bubble Amazon Web Services Media Streaming Plugin"
+msgstr "S3Bubble Amazon Web Services Media Streaming Plugin"
+
+#. Author of the plugin/theme
+msgid "S3Bubble"
+msgstr "S3Bubble"
