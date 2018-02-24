@@ -3,7 +3,7 @@
 Plugin Name: S3Bubble Amazon Web Services Media Streaming
 Plugin URI: https://s3bubble.com
 Description: S3Bubble Amazon Web Services Media Streaming Plugin 
-Version: 4.7
+Version: 4.8
 Author: S3Bubble
 Author URI: https://s3bubble.com
 Text Domain: s3bubble-amazon-web-services-oembed-media-streaming-support
@@ -32,7 +32,7 @@ if (!class_exists("s3bubble_oembed")) {
 	class s3bubble_oembed {
 		
 		// Set the version
-		public  $version = 24; 
+		public  $version = 110;  
 
 		/*
 		 * Constructor method to intiat the class
@@ -106,7 +106,7 @@ if (!class_exists("s3bubble_oembed")) {
 
 
 		/*
-		 * Create a connected webiste option
+		 * Create a connected website option
 		 * @author sameast
 		 * @params none
 		 */ 
@@ -429,6 +429,8 @@ if (!class_exists("s3bubble_oembed")) {
 			wp_enqueue_style( 's3bubble-oembed-admin-css', plugins_url('dist/css/admin.min.css', __FILE__), array(), $this->version );
 			wp_enqueue_style( 's3bubble-oembed-chosen-css', plugins_url('dist/css/chosen.min.css', __FILE__), array(), $this->version );
 			wp_enqueue_style( 's3bubble-oembed-sweet-css', plugins_url('dist/css/sweetalert.min.css', __FILE__), array(), $this->version );
+
+			wp_enqueue_script( 'buttons-github-js', 'https://buttons.github.io/buttons.js', array(),  $this->version, false );
 			wp_enqueue_script( 's3bubble-oembed-chosen-js', plugins_url('dist/js/chosen.jquery.min.js',__FILE__ ), array( 'jquery' ),  $this->version, true );
 			wp_enqueue_script( 's3bubble-oembed-sweetalert-js', plugins_url('dist/js/sweetalert.min.js',__FILE__ ), array( 'jquery' ),  $this->version, true );
 			wp_localize_script('s3bubble-oembed-sweetalert-js', 's3bubble_oembed_uid', array(
@@ -506,7 +508,7 @@ if (!class_exists("s3bubble_oembed")) {
 
 			}else{
 
-				$alert = '<div class="error"><p>We could not get your webiste address please contact support@s3bubble.com</p></div>';
+				$alert = '<div class="error"><p>We could not get your website address please contact support@s3bubble.com</p></div>';
 			
 			}
 
@@ -521,13 +523,19 @@ if (!class_exists("s3bubble_oembed")) {
 						<h3 class="hndle"><?php echo __( 'S3Bubble Links', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?></h3>
 						<div class="inside">
 							<ul>
-								<li><?php echo __( 'Roll back to old plugin', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?> <a href="https://s3.amazonaws.com/s3bubble-cdn/old-self-hosted-plugin/s3bubble-old-plugin.zip" target="_blank"><?php echo __( 'Old Plugin Download', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?></a> | <a href="https://www.youtube.com/watch?v=AevDfpELkZk" target="_blank"><?php echo __( 'Switching Video Tutorial', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?></a>
-								</li>
 								<li><?php echo __( 'Sign up for an S3Bubble account at', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?> <a href="https://s3bubble.com" target="_blank">https://s3bubble.com</a>
 								</li>
 							</ul>
-							<h4><?php echo __( 'Simply copy your html in any post or page. You can get the html from your S3Bubble dashboard.', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?></h4>
 							<a class="s3bubble-wp-btn" href="https://s3bubble.com/documentation/" target="_blank"><?php echo __( 'VIEW ALL EXAMPLES', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?></a>
+						</div> 
+					</div>
+					<div class="postbox">
+						<h3 class="hndle"><?php echo __( 'Now Hosted On GitHub', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?></h3>
+						<div class="inside">
+							<h4>Download update or roll back to previous versions on GitHub get the latest release here <a href="https://github.com/s3bubble/wordpress-plugin/releases" target="_blank">https://github.com/s3bubble/wordpress-plugin/releases</a></h4>
+							<a class="github-button" href="https://github.com/s3bubble/wordpress-plugin" data-size="large" data-show-count="true" aria-label="Star s3bubble/wordpress-plugin on GitHub">Star</a>
+							<a class="github-button" href="https://github.com/s3bubble/wordpress-plugin/issues" data-size="large" data-show-count="true" aria-label="Issue s3bubble/wordpress-plugin on GitHub">Issue</a>
+							<a class="github-button" href="https://github.com/s3bubble/wordpress-plugin/subscription" data-size="large" data-show-count="true" aria-label="Watch s3bubble/wordpress-plugin on GitHub">Watch</a>
 						</div> 
 					</div>
 				</div>
