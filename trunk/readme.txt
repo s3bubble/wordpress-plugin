@@ -3,7 +3,7 @@ Contributors: Samuel East
 Donate link: https://s3bubble.com
 Tags: Amazon Web Services, Amazon S3, Video, Audio, Media Streaming, Secure Streaming, Audio Player, Video Player, RTMP, Security, Adaptive Bitrate, Cloudfront, AWS, CDN, live streaming, VideoJS, JWPlayer, Wista, HLS, Youtube, Vimeo, On Demand streaming, Live Broadcasting, Broadcaster
 Requires at least: 2.0
-Tested up to: 4.9
+Tested up to: 4.9.4
 Stable tag: 3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -61,7 +61,7 @@ Remember if you need any extra help you can visit our friendly [support forum](h
 
 == Frequently Asked Questions ==
 
-Once you’ve installed the plug-in, the S3 Bubble Tutorial will guide you along every step of the way, but if you need any extra help you can visit our friendly [support forum](https://s3bubble.com/forums "problems").
+Once you’ve installed the plug-in, the S3Bubble Tutorial will guide you along every step of the way, but if you need any extra help you can visit our friendly [support forum](https://s3bubble.com/forums "problems").
 
 **What is S3Bubble?**
 S3Bubble is a media streaming service that allows you to serve video, audio and images from your Amazon S3 account to a widget that can be embedded within wordpress.
@@ -86,7 +86,7 @@ S3Bubble is made by a small but passionate team based [here](http://www.welshice
 We love media and technology, so we decided to make it easier for people to share their content. If you want to get in touch, you can find us here on [Twitter >](https://twitter.com/s3bubble "S3bubble Twitter").
 
 **Got another Question?**
-Once you’ve installed the plug-in, the S3 Bubble Tutorial will guide you along every step of the way, but if you need any extra help you can visit our friendly [support forum](https://s3bubble.com/forums "problems").
+Once you’ve installed the plug-in, the S3Bubble Tutorial will guide you along every step of the way, but if you need any extra help you can visit our friendly [support forum](https://s3bubble.com/forums "problems").
 
 == Screenshots ==
 
@@ -95,6 +95,12 @@ Once you’ve installed the plug-in, the S3 Bubble Tutorial will guide you along
 3. Works on all modern devices
 
 == Changelog ==
+
+= 4.8 =
+Full Framework updates
+Android Facebook browser fix
+New Icons
+New Themes
 
 = 4.7 =
 Vimeo fixes
