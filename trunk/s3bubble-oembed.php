@@ -453,10 +453,6 @@ if (!class_exists("s3bubble_oembed")) {
 			wp_enqueue_style('s3bubble-hosted-cdn', plugins_url('dist/css/s3bubble.min.css',__FILE__ ), array(), $this->version);
         	wp_enqueue_script('s3bubble-hosted-cdn', plugins_url('dist/js/s3bubble.min.js',__FILE__ ), array(), $this->version, true);
 
-			// Include the self hosted scripts
-			//wp_enqueue_style( 's3bubble-hosted-cdn', '//s3.amazonaws.com/aws-hosted/s3bubble.min.css' );
-			//wp_enqueue_script( 's3bubble-hosted-cdn', '//s3.amazonaws.com/aws-hosted/s3bubble.min.js', 'jquery', $this->version, true );
-
 		}
 
 		/*
