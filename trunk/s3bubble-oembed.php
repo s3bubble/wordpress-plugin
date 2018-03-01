@@ -3,12 +3,12 @@
 Plugin Name: S3Bubble Amazon Web Services Media Streaming
 Plugin URI: https://s3bubble.com
 Description: S3Bubble Amazon Web Services Media Streaming Plugin 
-Version: 4.8
+Version: 5.0
 Author: S3Bubble
 Author URI: https://s3bubble.com
 Text Domain: s3bubble-amazon-web-services-oembed-media-streaming-support
 Domain Path: /languages
-License: GPL2
+License: GPL2 
 */
  
 /*  Copyright YEAR  Samuel East  (email : mail@samueleast.co.uk)
@@ -32,7 +32,7 @@ if (!class_exists("s3bubble_oembed")) {
 	class s3bubble_oembed {
 		
 		// Set the version
-		public  $version = 110;  
+		public  $version = 111;  
 
 		/*
 		 * Constructor method to intiat the class
@@ -540,7 +540,7 @@ if (!class_exists("s3bubble_oembed")) {
 						<div class="postbox"> 
 							<h3 class="hndle"><?php echo __( 'Must Watch Setup Video', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?></h3>
 							<div class="inside">
-								<div style="position: relative;padding-bottom: 56.25%;"><iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/7J8j7u293Fw" frameborder="0" allowfullscreen></iframe></div> 	
+								<div style="position: relative;padding-bottom: 56.25%;"><iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/yTZG5lUKh6Q" frameborder="0" allowfullscreen></iframe></div> 	
 							</div><!-- .inside -->
 						</div>
 

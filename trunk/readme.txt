@@ -1,7 +1,7 @@
 ﻿=== S3Bubble Amazon Web Services Media Streaming ===
 Contributors: Samuel East
 Donate link: https://s3bubble.com
-Tags: Amazon Web Services, Amazon S3, Video, Audio, Media Streaming, Secure Streaming, Audio Player, Video Player, RTMP, Security, Adaptive Bitrate, Cloudfront, AWS, CDN, live streaming, VideoJS, JWPlayer, Wista, HLS, Youtube, Vimeo, On Demand streaming, Live Broadcasting, Broadcaster
+Tags: Amazon Web Services, HTML5 Player, Amazon S3, Video, Audio, Media Streaming, Secure Streaming, Audio Player, Video Player, RTMP, Security, Adaptive Bitrate, Cloudfront, AWS, CDN, live streaming, VideoJS, JWPlayer, Wista, HLS, Youtube, Vimeo, On Demand streaming, Live Broadcasting, Broadcaster
 Requires at least: 2.0
 Tested up to: 4.9.4
 Stable tag: 3.0
@@ -21,7 +21,7 @@ Fast, Reliable, Secure Media Streaming Powered by Amazon Web Services
 
 **S3Bubble Sign Up: [View Website](https://s3bubble.com "View Website")**
 
-**Neflix Inspired Media Streaming Theme: [View Example](http://streamiumtheme.com "View Website")**
+**Neflix Inspired Media Streaming Theme: [View Example](https://streamiumtheme.com "View Website")**
 
 = Why Choose S3Bubble: =
 
@@ -37,6 +37,7 @@ Hosting video, galleries and audio files is heavyweight work. S3Bubble adds powe
 Download the plugin or Sign Up for an account at [S3Bubble](https://s3bubble.com "S3bubble")
 
 = Features: =
+* Player Themes
 * Powerful Media Playlists
 * Cross Platform Multiple Adverts
 * VAST/VPAID Advertising Integration
