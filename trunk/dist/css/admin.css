@@ -1,5 +1,6 @@
 #toplevel_page_s3bubble_oembed img {
 	margin-top: -3px;
+    width: 22px;
 }
 .s3bubble-pre {
     display: block;
@@ -14,6 +15,14 @@
     border: 1px solid #333;
     border-radius: 4px;
     white-space: pre-line;
+}
+.s3bubble-admin-video-wrapper {
+    width: 31%;
+    display: inline-block;
+    height: 100%;
+    padding: 1%;
+    background: #eee;
+    border-radius: 5px;
 }
 .s3bubble-video-wrapper {
 	position: relative;
@@ -32,11 +41,11 @@
 	width: 100% !important;
 }
 .s3bubble-wp-btn {
-    background: #F48221;
-    border-color: #F48221;
-    width: 96%;
+    background: #717ee2;
+    border-color: #717ee2;
+    width: 98%;
     display: block;
-    padding: 2%;
+    padding: 1%;
     text-align: center;
     color: white;
     border-radius: 5px;

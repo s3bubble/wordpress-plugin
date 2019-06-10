@@ -1,101 +1,121 @@
-﻿=== S3Bubble Amazon Web Services Media Streaming ===
-Contributors: Samuel East
+﻿=== S3Bubble WordPress Video Streaming ===
+Contributors: S3Bubble
 Donate link: https://s3bubble.com
-Tags: Amazon Web Services, HTML5 Player, Amazon S3, Video, Audio, Media Streaming, Secure Streaming, Audio Player, Video Player, RTMP, Security, Adaptive Bitrate, Cloudfront, AWS, CDN, live streaming, VideoJS, JWPlayer, Wista, HLS, Youtube, Vimeo, On Demand streaming, Live Broadcasting, Broadcaster
-Requires at least: 2.0
-Tested up to: 4.9.4
-Stable tag: 3.0
+Tags: Amazon Web Services, Woocommerce, MediaConvert, MediaLive, MediaTailor, MediaPackage, Roku, FireTv, HTML5 Player, Video, Media Streaming, Secure Streaming,Video Player, Security, Adaptive Bitrate, Cloudfront, AWS, CDN, live streaming, VideoJS, HLS, Dash, Youtube, Vimeo, On Demand streaming, Live Broadcasting, MediaLive, MediaConvert, OTT, IPTV, DRM, digital right management, Video protection,encryption,download helper
+Requires at least: 4.0
+Tested up to: 5.2
+Requires PHP: 5.6
+Stable tag: 4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Fast, Reliable, Secure Media Streaming Powered by Amazon Web Services 
+Amazon Web Services, Roku, FireTV & WordPress Video Streaming
 
 == Description ==
+ 
+**S3Bubble How It Works**
+[youtube http://www.youtube.com/watch?v=QcHNTZH2QHQ]
 
-**Overview Video**
-[youtube http://www.youtube.com/watch?v=7J8j7u293Fw]
+= DRM Protected Video Streaming‎: =
 
-= Please See Our Documentation: =
+Prevent your video content from being downloaded with our AWS DRM Static Key security. [View Example](https://s3bubble.com/documentation/aws-mediaconvert-drm-hls-with-statickey/ "View Example")
 
-**Documentation & Examples: [View Documentation](https://s3bubble.com/documentation "View Documentation")**
+Sign up for a 30 free trial.
 
 **S3Bubble Sign Up: [View Website](https://s3bubble.com "View Website")**
 
-**Neflix Inspired Media Streaming Theme: [View Example](https://streamiumtheme.com "View Website")**
+**WordPress, AWS, Roku, FireTV Video Streaming Theme: [View Example](https://streamiumtheme.com "View Website")**
 
-= Why Choose S3Bubble: =
+= Theme Features: =
+* Mobile Compatible
+* VAST/VPAID Advertising
+* Google Analytics
+* Text/Audio Captions WEBVTT
+* VOD OnDemand or Live Streaming
+* Roku Direct Publisher MRSS Feed Paid ADs
+* Direct CDN, AWS, Vimeo or Youtube Support
+* DRM Protected Video Streaming‎
+* Monetize with Woocommerce
+* Amazon Uploader
+* Seasons & Episodes
+* Rating System
+* Advanced Search
+* HLS Adaptive Bitrate, DASH, MP4 Support
 
-**Embed in one click, stream to any device.**
-Add a media url to a post or page in a few clicks. S3Bubble handles the rest. 
-
-**Secure Online Media Streaming.**
-Youtube is great but if you’d rather get users to pay for your content S3Bubble may be for you. Combined with a membership paywall you can professionally stream images, audio and video to your members hitch free. 
-
-**You could save a fortune in media streaming.**
-Hosting video, galleries and audio files is heavyweight work. S3Bubble adds powerful functionality to your existing Amazon S3 account, so you can forget about hosting issues. Because of this, you only ever pay for what you use.
-
-Download the plugin or Sign Up for an account at [S3Bubble](https://s3bubble.com "S3bubble")
-
-= Features: =
-* Player Themes
-* Powerful Media Playlists
-* Cross Platform Multiple Adverts
+= Dashboard Features: =
+* AWS Media Convert (Media encoding)
+* AWS Media Live (Broadcast level live streaming)
+* AWS Media Package (Media distribution)
+* AWS Media Tailor (Ads)
+* Server-Side Ad Insertion (SSAI)
 * VAST/VPAID Advertising Integration
-* Auto Generate Subtitles
-* (HLS) Adaptive Bitrate Streaming With Secure Encyption
-* 360 Degree Virtual Reality Videos
-* Generated Video Thumbnails
-* Set Video Preview Times
-* Brand Player & Custom Buttons
-* Custom & Global Posters
-* Friendly support forum - support from our Developers and current members
+* Captions/Subtitles
+* (HLS) Adaptive Bitrate Streaming
+* Video Thumbnails
+* DRM Protected Video Streaming‎
 
 Download the plugin or Sign Up for an account at [S3Bubble](https://s3bubble.com "S3bubble")
 
 == Installation ==
 
-* Watch Our Must See Explainer Video 2017
+* Watch Our Must See Explainer Video
 
-[youtube http://www.youtube.com/watch?v=ZG_P-kLSTd4]
-
-Remember if you need any extra help you can visit our friendly [support forum](https://s3bubble.com/forums "problems").
+[youtube http://www.youtube.com/watch?v=bAV6_lv4uus]
 
 == Frequently Asked Questions ==
 
-Once you’ve installed the plug-in, the S3Bubble Tutorial will guide you along every step of the way, but if you need any extra help you can visit our friendly [support forum](https://s3bubble.com/forums "problems").
-
-**What is S3Bubble?**
-S3Bubble is a media streaming service that allows you to serve video, audio and images from your Amazon S3 account to a widget that can be embedded within wordpress.
-
-**How much does it cost?**
-[You can sign up for a 28 day free trial of the service here >](https://s3bubble.com/ "S3bubble")
-
-**What’s Amazon S3?**
-Amazon S3 is a cloud storage platform, that charges on a per-usage basis. Essentially, a very cheap way to store and share large amounts of data. [Check their pricing out here >](http://aws.amazon.com/s3/pricing/ "S3bubble Amazon S3 Pricing")
-
-**How does the plug-in work?**
-Much the same as any other Wordpress plug-in. Simply install it as normal. [Then create your S3Bubble Account](https://s3bubble.com "S3bubble Sign Up")
-
-**What are the embeddable media players?**
-The media players are fully responsive and tested with all the major mobile platforms and web browsers. [You can see a full range of them here >](https://s3bubble.com "S3bubble Embed Players")
-
-**What about the Mobile App?**
-For premium users the mobile app offers a way to record, upload and manage their content. The app is available on both iOS and Android. 
-
 **Who are S3Bubble?**
-S3Bubble is made by a small but passionate team based [here](http://www.welshice.org/ "S3bubble Welsh ICE"), in Wales in the UK.
+S3Bubble is made by a small but passionate team based [here](https://accelerator.natwest.com "S3bubble Natwest"), in Cardiff, UK.
 We love media and technology, so we decided to make it easier for people to share their content. If you want to get in touch, you can find us here on [Twitter >](https://twitter.com/s3bubble "S3bubble Twitter").
-
-**Got another Question?**
-Once you’ve installed the plug-in, the S3Bubble Tutorial will guide you along every step of the way, but if you need any extra help you can visit our friendly [support forum](https://s3bubble.com/forums "problems").
 
 == Screenshots ==
 
-1. Netflix Streamium Theme
-2. Your very own media service powerful tools
-3. Works on all modern devices
+1. Dashboard 1
+2. Dashboard 2
+3. Dashboard 3
 
 == Changelog ==
+
+= 5.9 =
+Android DRM bug fix 
+
+= 5.8 =
+YouTube duration bug fix
+
+= 5.7 =
+New workflow 2019
+DASH support fixes
+Clean theme updated
+
+= 5.6 =
+DRM proxy static key security
+
+= 5.5 =
+WordPress 5.0 functionality
+HLS plugin updated
+Dash plugin updated
+
+= 5.4 =
+Dash functionality added 
+HLS plugin updated
+
+= 5.3 =
+New Dashboard
+Proxy Security
+AWS Media Convert (Media encoding)
+AWS Media Live (Broadcast level live streaming)
+AWS Media Package (Media distribution)
+AWS Media Tailor (Ads)
+Server-Side Ad Insertion (SSAI)
+VAST/VPAID Advertising Integration
+
+= 5.2 =
+AWS Media Convert (Media encoding)
+AWS Media Live (Broadcast level live streaming)
+AWS Media Package (Media distribution)
+AWS Media Tailor (Ads)
+Server-Side Ad Insertion (SSAI)
+VAST/VPAID Advertising Integration
 
 = 4.8 =
 Full Framework updates

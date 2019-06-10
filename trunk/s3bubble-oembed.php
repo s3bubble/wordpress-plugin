@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: S3Bubble Amazon Web Services Media Streaming
+Plugin Name: S3Bubble WordPress Video Streaming
 Plugin URI: https://s3bubble.com
-Description: S3Bubble Amazon Web Services Media Streaming Plugin 
-Version: 5.0
+Description: Amazon Web Services, Roku, FireTV & WordPress Video Streaming
+Version: 5.9
 Author: S3Bubble
 Author URI: https://s3bubble.com
 Text Domain: s3bubble-amazon-web-services-oembed-media-streaming-support
@@ -11,7 +11,7 @@ Domain Path: /languages
 License: GPL2 
 */
  
-/*  Copyright YEAR  Samuel East  (email : mail@samueleast.co.uk)
+/*  Copyright YEAR  S3Bubble  (email : support@s3bubble.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -27,12 +27,14 @@ License: GPL2
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */ 
 
+// Exit if accessed directly.
+defined('ABSPATH') || exit;
 
 if (!class_exists("s3bubble_oembed")) {
 	class s3bubble_oembed {
 		
 		// Set the version
-		public  $version = 111;  
+		public  $version = 130;  
 
 		/*
 		 * Constructor method to intiat the class
@@ -92,6 +94,14 @@ if (!class_exists("s3bubble_oembed")) {
 			 * @params none
 			 */ 
 			add_action( 'plugins_loaded', array( $this, 's3bubble_amazon_web_services_oembed_media_streaming_support_textdomain' ) );
+
+			/*
+			 * Get the DRM token
+			 * @author sameast
+			 * @params none
+			 */
+			add_action('wp_ajax_s3bubble_proxy_token', array( $this, 's3bubble_proxy_token' )); 
+			add_action('wp_ajax_nopriv_s3bubble_proxy_token', array( $this, 's3bubble_proxy_token' ));
 
 		}
 
@@ -411,7 +421,7 @@ if (!class_exists("s3bubble_oembed")) {
 		*/ 
         function s3bubble_oembed_admin_menu(){
 
-			add_menu_page( 's3bubble_oembed', 'AWS S3Bubble', 'administrator', 's3bubble_oembed', array($this, 's3bubble_oembed_admin'), 'https://s3.amazonaws.com/s3bubble-cdn/theme-images/s3bubblelogo.png', 10);
+			add_menu_page( 's3bubble_oembed', 'S3Bubble OTT', 'administrator', 's3bubble_oembed', array($this, 's3bubble_oembed_admin'), plugins_url('dist/img/s3bubblelogo.png', __FILE__), 10);
 
 			//call register settings function
 			add_action( 'admin_init', array($this, 'register_s3bubble_aws_self_hosted_settings') );
@@ -426,13 +436,13 @@ if (!class_exists("s3bubble_oembed")) {
 		function s3bubble_oembed_admin_scripts(){
 			
 			$s3bubble_oembed_connected_website = get_option("s3bubble_oembed_connected_website");
-			wp_enqueue_style( 's3bubble-oembed-admin-css', plugins_url('dist/css/admin.min.css', __FILE__), array(), $this->version );
-			wp_enqueue_style( 's3bubble-oembed-chosen-css', plugins_url('dist/css/chosen.min.css', __FILE__), array(), $this->version );
-			wp_enqueue_style( 's3bubble-oembed-sweet-css', plugins_url('dist/css/sweetalert.min.css', __FILE__), array(), $this->version );
+			wp_enqueue_style( 's3bubble-oembed-admin-css', plugins_url('/dist/css/admin.min.css', __FILE__), array(), $this->version );
+			wp_enqueue_style( 's3bubble-oembed-chosen-css', plugins_url('/dist/css/chosen.min.css', __FILE__), array(), $this->version );
+			wp_enqueue_style( 's3bubble-oembed-sweet-css', plugins_url('/dist/css/sweetalert.min.css', __FILE__), array(), $this->version );
 
 			wp_enqueue_script( 'buttons-github-js', 'https://buttons.github.io/buttons.js', array(),  $this->version, false );
-			wp_enqueue_script( 's3bubble-oembed-chosen-js', plugins_url('dist/js/chosen.jquery.min.js',__FILE__ ), array( 'jquery' ),  $this->version, true );
-			wp_enqueue_script( 's3bubble-oembed-sweetalert-js', plugins_url('dist/js/sweetalert.min.js',__FILE__ ), array( 'jquery' ),  $this->version, true );
+			wp_enqueue_script( 's3bubble-oembed-chosen-js', plugins_url('/dist/js/chosen.jquery.min.js',__FILE__ ), array( 'jquery' ),  $this->version, true );
+			wp_enqueue_script( 's3bubble-oembed-sweetalert-js', plugins_url('/dist/js/sweetalert.min.js',__FILE__ ), array( 'jquery' ),  $this->version, true );
 			wp_localize_script('s3bubble-oembed-sweetalert-js', 's3bubble_oembed_uid', array(
 				's3website' => (!empty($s3bubble_oembed_connected_website) ? $s3bubble_oembed_connected_website : ""),
 				's3bubbleSelfHosted' => get_option( 's3bubble_selfhosted_switch' ) ? "true" : "false"
@@ -446,12 +456,12 @@ if (!class_exists("s3bubble_oembed")) {
         */ 
 		function s3bubble_oembed_scripts(){
 			
-			wp_enqueue_style('s3bubble-oembed-css', plugins_url('dist/css/styles.min.css',__FILE__ ), array(),  $this->version );
-			wp_enqueue_script( 's3bubble-oembed-js', plugins_url('dist/js/scripts.min.js',__FILE__ ), array( 'jquery' ),  $this->version, true );
+			wp_enqueue_style('s3bubble-oembed-css', plugins_url('/dist/css/styles.min.css',__FILE__ ), array(),  $this->version );
+			wp_enqueue_script( 's3bubble-oembed-js', plugins_url('/dist/js/scripts.min.js',__FILE__ ), array( 'jquery' ),  $this->version, true );
 
 			// Locally hosted
-			wp_enqueue_style('s3bubble-hosted-cdn', plugins_url('dist/css/s3bubble.min.css',__FILE__ ), array(), $this->version);
-        	wp_enqueue_script('s3bubble-hosted-cdn', plugins_url('dist/js/s3bubble.min.js',__FILE__ ), array(), $this->version, true);
+			wp_enqueue_style('s3bubble-hosted-cdn', plugins_url('/dist/css/s3bubble.min.css',__FILE__ ), array(), $this->version);
+        	wp_enqueue_script('s3bubble-hosted-cdn', plugins_url('/dist/js/s3bubble.min.js',__FILE__ ), array(), $this->version, true);
 
 		}
 
@@ -466,7 +476,7 @@ if (!class_exists("s3bubble_oembed")) {
 				add_filter( 'mce_buttons', array( $this, 's3bubble_oembed_register_buttons' ) );
 			} 
 		}
-		
+		 
 		/*
 		* Adds the menu item to the tiny mce
 		* @author sameast
@@ -511,58 +521,88 @@ if (!class_exists("s3bubble_oembed")) {
 		?>
 
 		<div class="wrap">
-			<h2><?php echo __( 'Fast, Reliable, Secure Media Streaming Powered by Amazon Web Services', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?></h2>
+			<h2><?php echo __( 'WordPress OTT AWS Video Streaming', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?></h2>
 			<?php echo $alert; ?>
-			<div class="metabox-holder has-right-sidebar">
-				<div class="inner-sidebar" style="width:40%">
-					<div class="postbox">
-						<h3 class="hndle"><?php echo __( 'S3Bubble Links', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?></h3>
-						<div class="inside">
-							<ul>
-								<li><?php echo __( 'Sign up for an S3Bubble account at', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?> <a href="https://s3bubble.com" target="_blank">https://s3bubble.com</a>
-								</li>
-							</ul>
-							<a class="s3bubble-wp-btn" href="https://s3bubble.com/documentation/" target="_blank"><?php echo __( 'VIEW ALL EXAMPLES', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?></a>
-						</div> 
-					</div>
-					<div class="postbox">
-						<h3 class="hndle"><?php echo __( 'Now Hosted On GitHub', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?></h3>
-						<div class="inside">
-							<h4>Download update or roll back to previous versions on GitHub get the latest release here <a href="https://github.com/s3bubble/wordpress-plugin/releases" target="_blank">https://github.com/s3bubble/wordpress-plugin/releases</a></h4>
-							<a class="github-button" href="https://github.com/s3bubble/wordpress-plugin" data-size="large" data-show-count="true" aria-label="Star s3bubble/wordpress-plugin on GitHub">Star</a>
-							<a class="github-button" href="https://github.com/s3bubble/wordpress-plugin/issues" data-size="large" data-show-count="true" aria-label="Issue s3bubble/wordpress-plugin on GitHub">Issue</a>
-							<a class="github-button" href="https://github.com/s3bubble/wordpress-plugin/subscription" data-size="large" data-show-count="true" aria-label="Watch s3bubble/wordpress-plugin on GitHub">Watch</a>
-						</div> 
-					</div>
-				</div>
+			<div class="metabox-holder">
 				<div id="post-body">
-					<div id="post-body-content" style="margin-right: 41%;">
+					<div id="post-body-content">
 						<div class="postbox"> 
-							<h3 class="hndle"><?php echo __( 'Must Watch Setup Video', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?></h3>
+							<h3 class="hndle"><?php echo __( 'Please Watch Our Setup Videos', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?></h3>
 							<div class="inside">
-								<div style="position: relative;padding-bottom: 56.25%;"><iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/yTZG5lUKh6Q" frameborder="0" allowfullscreen></iframe></div> 	
+
+								<div class="s3bubble-admin-video-wrapper">
+									<div style="position: relative;padding-bottom: 56.25%;"><iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/QcHNTZH2QHQ" frameborder="0" allowfullscreen></iframe></div> 	
+								</div>
+
+								<div class="s3bubble-admin-video-wrapper">
+									<div style="position: relative;padding-bottom: 56.25%;"><iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/S06mflFH8Fs" frameborder="0" allowfullscreen></iframe></div> 	
+								</div>
+
+								<div class="s3bubble-admin-video-wrapper">
+									<div style="position: relative;padding-bottom: 56.25%;"><iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/bAV6_lv4uus" frameborder="0" allowfullscreen></iframe></div> 	
+								</div>
+							
 							</div><!-- .inside -->
+
 						</div>
 
-						<form method="post" action="options.php">
-						    <?php settings_fields( 's3bubble-aws-self-hosted-plugin-settings-group' ); ?>
-						    <?php do_settings_sections( 's3bubble-aws-self-hosted-plugin-settings-group' ); ?>
-						    <table class="form-table">
-						    	<tr valign="top">
-						        <th scope="row"><?php echo __( 'Switch over to a Self Hosted Setup', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?><br><small>Please ignore this if you are a new user.</small></th>
-						        <td><input name="s3bubble_selfhosted_switch" type="checkbox" value="1" <?php checked( '1', get_option( 's3bubble_selfhosted_switch' ) ); ?> /></td>
-						        </tr>
-						    </table>
-						    
-						    <?php submit_button(); ?>
+						<div class="postbox">
+							<h3 class="hndle"><?php echo __( 'DRM Secure Proxy Url', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?></h3>
+							<div class="inside">
+								<pre class="s3bubble-pre"><?php echo admin_url( 'admin-ajax.php' ); ?>?action=s3bubble_proxy_token</pre>
+							</div>
+						</div>
 
-						</form>
+						<div class="postbox">
+							<h3 class="hndle"><?php echo __( 'Get Started', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?></h3>
+							<div class="inside">
+								<p>To get started with S3Bubble you need to sign up for an account you can then connect your website and start creating your players.</p>
+								<a class="s3bubble-wp-btn" href="https://s3bubble.com" target="_blank"><?php echo __( 'Sign Up', 's3bubble-amazon-web-services-oembed-media-streaming-support' ); ?></a>
+							</div> 
+						</div>
 					</div> <!-- #post-body-content -->
 				</div> <!-- #post-body -->
 			</div> <!-- .metabox-holder --> 
 		</div> <!-- .wrap -->
 		<?php	
        }
+
+
+       function s3bubble_proxy_token(){
+
+       		if(isset($_COOKIE['Authorization'])){
+
+       			$response = wp_remote_post( 'https://s3bubbleapi.com/proxy/token', array(
+				    'headers' => array(
+				        'Authorization' => $_COOKIE['Authorization'],
+				    )
+				));
+
+				if ( is_wp_error( $response ) ) {
+				    
+				    $error_message = $response->get_error_message();
+				    echo "Something went wrong: $error_message";
+
+				} else {
+				   	
+				   	if(isset($response['body'])){
+
+				   		echo $response['body'];
+
+				   	}else{
+
+				   		echo "Something went wrong no body:";
+
+				   	}
+
+				}
+
+       		}
+
+       		die(); // !IMPORTANT
+
+       }
+
 
     }
 

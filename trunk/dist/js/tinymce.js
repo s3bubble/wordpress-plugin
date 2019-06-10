@@ -6,16 +6,13 @@ jQuery( document ).ready(function( $ ) {
              * S3bubble video
              */
             ed.addButton('s3bubble_oembed_global_shortcode', {
-                title : 'AWS S3Bubble',
+                title : 'S3Bubble',
                 cmd : 's3bubble_oembed_global_shortcode',
-                image : 'https://s3.amazonaws.com/s3bubble-cdn/theme-images/s3bubblelogo.png',
-                //text: 'S3Bubble',
-                //icon: false
+                image : url + '/s3bubblelogo.png'
             });
             ed.addCommand('s3bubble_oembed_global_shortcode', function() {
                 
                 var website = window.location.host.indexOf('www.') && window.location.host || window.location.host.replace('www.', '');
-
                 $.post("https://s3bubbleapi.com/plugin/codes", {
                     website: website
                 }, function(response) {
@@ -24,24 +21,33 @@ jQuery( document ).ready(function( $ ) {
 
                         // run a alert
                         swal({
-                          title: "Error! " + response.message,
-                          text: "Loading...",
-                          type: "error",
-                          showCancelButton: false,
+                          title: "Error",
+                          html: true,
+                          text: response.message,
+                          type: "warning",
+                          showCancelButton: true,
                           showConfirmButton: true,
-                          confirmButtonClass: "button button-danger",
-                          confirmButtonText: "Ok",
-                          closeOnConfirm: true
+                          confirmButtonText: "Open",
+                          cancelButtonText: "Cancel",
+                          closeOnConfirm: true,
+                          closeOnCancel: true
                         },
                         function(isConfirm) {
-                          $('.s3bubble-select-group').html();
+                            
+                            if (isConfirm) {
+
+                                var win = window.open('https://s3bubble.com/app/#/wpwebsites', '_blank');
+                                win.focus();
+                            }
+
                         });
                          
                     }else{
 
                         swal({
-                          title: "AWS GENERATED MEDIA",
-                          text: "Success your media will be listed in the dropdown below if you media is not shown please visit your media at least once in the S3Bubble Dashboard.", 
+                          title: "Success",
+                          html: true,
+                          text: "Your Channel Players are listed below. <p class='s3bubble-select-group'></p>", 
                           type: "success",
                           showCancelButton: true,
                           showConfirmButton: true,
@@ -73,16 +79,16 @@ jQuery( document ).ready(function( $ ) {
                             _name = _name.replace(/\\/g, "");
                             return _name;
 
-                        }
+                        } 
 
-                        var html = '<select class="chosen-select" tabindex="1" name="s3bubbleIframeUrl" id="s3bubbleIframeUrl"><option value="">Select Media</option>';
+                        var html = '<select class="chosen-select" tabindex="1" name="s3bubbleIframeUrl" id="s3bubbleIframeUrl"><option value="">Select Player</option>';
 
                         // GET THE LIVE STREAMS
                         $.each(response.streams, function (i, item) {
 
                             var stream = item.stream;
                             var title = (item.title) ? s3bubblePluginCleanFilename(item.title) : "No Title";
-                            html += "<option data-class='s3bubble-live' data-type='' data-key='stream' value='" + stream + "'>Type: Live, Stream: " + stream + ", Title: " + title + "</option>";
+                            html += "<option data-class='s3bubble-live' data-type='' data-key='stream' value='" + stream + "'>Stream: " + stream + ", Title: " + title + "</option>";
 
                         });
 
@@ -92,7 +98,7 @@ jQuery( document ).ready(function( $ ) {
                             var code = item.code;
                             var title = s3bubblePluginCleanFilename(item.title);
                             var type = item.type;
-                            html += "<option data-class='s3bubble-playlist' data-type='" + type + "' data-key='" + title + "' value='" + code + "'>Type: Playlist, Code: " + code + ", Title: " + title + "</option>"; 
+                            html += "<option data-class='s3bubble-playlist' data-type='" + type + "' data-key='" + title + "' value='" + code + "'>Code: " + code + ", Title: " + title + "</option>"; 
                             
                         });
 
@@ -104,7 +110,7 @@ jQuery( document ).ready(function( $ ) {
                             var title = (item.title) ? s3bubblePluginCleanFilename(item.title) : key;
                             var type = (item.type === 'audio') ? 's3bubble-audio' : 's3bubble'; 
                             var className = (item.type === 'audio') ? 's3bubble-audio' : 's3bubble'; 
-                            html += "<option data-class='" + className + "' data-type='' data-key='" + key + "' value='" + code + "'>Type: Media, Code: " + code + ", Title: " + title + "</option>"; 
+                            html += "<option data-class='" + className + "' data-type='' data-key='" + key + "' value='" + code + "'>Code: " + code + ", Title: " + title + "</option>"; 
 
                         });
 
