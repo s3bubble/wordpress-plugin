@@ -34,7 +34,7 @@ if (!class_exists("s3bubble_oembed")) {
 	class s3bubble_oembed {
 		
 		// Set the version
-		public  $version = 130;  
+		public  $version = 131;  
 
 		/*
 		 * Constructor method to intiat the class
