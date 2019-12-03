@@ -3,7 +3,7 @@ Contributors: S3Bubble
 Donate link: https://s3bubble.com
 Tags: Amazon Web Services, Woocommerce, MediaConvert, MediaLive, MediaTailor, MediaPackage, Roku, FireTv, HTML5 Player, Video, Media Streaming, Secure Streaming,Video Player, Security, Adaptive Bitrate, Cloudfront, AWS, CDN, live streaming, VideoJS, HLS, Dash, Youtube, Vimeo, On Demand streaming, Live Broadcasting, MediaLive, MediaConvert, OTT, IPTV, DRM, digital right management, Video protection,encryption,download helper
 Requires at least: 4.0
-Tested up to: 5.2
+Tested up to: 5.2.1
 Requires PHP: 5.6
 Stable tag: 4.0
 License: GPLv2 or later
@@ -75,6 +75,10 @@ We love media and technology, so we decided to make it easier for people to shar
 3. Dashboard 3
 
 == Changelog ==
+
+= 6.0 =
+Theme css updated
+Now add your own logo to the player [youtube https://www.youtube.com/watch?v=ES70cUa6gjA]
 
 = 5.9 =
 Android DRM bug fix 

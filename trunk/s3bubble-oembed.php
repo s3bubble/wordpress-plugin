@@ -3,7 +3,7 @@
 Plugin Name: S3Bubble WordPress Video Streaming
 Plugin URI: https://s3bubble.com
 Description: Amazon Web Services, Roku, FireTV & WordPress Video Streaming
-Version: 5.9
+Version: 6.0
 Author: S3Bubble
 Author URI: https://s3bubble.com
 Text Domain: s3bubble-amazon-web-services-oembed-media-streaming-support
