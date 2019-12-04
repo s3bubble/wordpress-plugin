@@ -3,7 +3,7 @@ Contributors: S3Bubble
 Donate link: https://s3bubble.com
 Tags: Amazon Web Services, Woocommerce, MediaConvert, MediaLive, MediaTailor, MediaPackage, Roku, FireTv, HTML5 Player, Video, Media Streaming, Secure Streaming,Video Player, Security, Adaptive Bitrate, Cloudfront, AWS, CDN, live streaming, VideoJS, HLS, Dash, Youtube, Vimeo, On Demand streaming, Live Broadcasting, MediaLive, MediaConvert, OTT, IPTV, DRM, digital right management, Video protection,encryption,download helper
 Requires at least: 4.0
-Tested up to: 5.2.1
+Tested up to: 5.3
 Requires PHP: 5.6
 Stable tag: 4.0
 License: GPLv2 or later
@@ -12,15 +12,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Amazon Web Services, Roku, FireTV & WordPress Video Streaming
 
 == Description ==
- 
-**S3Bubble How It Works**
-[youtube http://www.youtube.com/watch?v=QcHNTZH2QHQ]
 
 = DRM Protected Video Streaming‎: =
 
 Prevent your video content from being downloaded with our AWS DRM Static Key security. [View Example](https://s3bubble.com/documentation/aws-mediaconvert-drm-hls-with-statickey/ "View Example")
 
-Sign up for a 30 free trial.
+Sign up for a 10 free trial.
 
 **S3Bubble Sign Up: [View Website](https://s3bubble.com "View Website")**
 
@@ -65,6 +62,7 @@ Download the plugin or Sign Up for an account at [S3Bubble](https://s3bubble.com
 == Frequently Asked Questions ==
 
 **Who are S3Bubble?**
+
 S3Bubble is made by a small but passionate team based [here](https://accelerator.natwest.com "S3bubble Natwest"), in Cardiff, UK.
 We love media and technology, so we decided to make it easier for people to share their content. If you want to get in touch, you can find us here on [Twitter >](https://twitter.com/s3bubble "S3bubble Twitter").
 
@@ -79,6 +77,8 @@ We love media and technology, so we decided to make it easier for people to shar
 = 6.0 =
 Theme css updated
 Now add your own logo to the player [youtube https://www.youtube.com/watch?v=ES70cUa6gjA]
+Compact version updated
+Waveforms removed
 
 = 5.9 =
 Android DRM bug fix 
