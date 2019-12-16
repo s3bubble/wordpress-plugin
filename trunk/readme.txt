@@ -1,25 +1,49 @@
-﻿=== S3Bubble WordPress Video Streaming ===
+﻿=== WordPress Video SVOD, AVOD, VOD ===
 Contributors: S3Bubble
 Donate link: https://s3bubble.com
-Tags: Amazon Web Services, Woocommerce, MediaConvert, MediaLive, MediaTailor, MediaPackage, Roku, FireTv, HTML5 Player, Video, Media Streaming, Secure Streaming,Video Player, Security, Adaptive Bitrate, Cloudfront, AWS, CDN, live streaming, VideoJS, HLS, Dash, Youtube, Vimeo, On Demand streaming, Live Broadcasting, MediaLive, MediaConvert, OTT, IPTV, DRM, digital right management, Video protection,encryption,download helper
+Tags: Amazon Web Services, Woocommerce, MediaConvert, MediaLive, MediaTailor, MediaPackage, Roku, FireTv, HTML5 Player, Video, Media Streaming, Secure Streaming,Video Player, Security, Adaptive Bitrate, Cloudfront, AWS, CDN, VideoJS, HLS, Dash, Youtube, Vimeo, On Demand streaming, Live Broadcasting, MediaLive, MediaConvert, SSAI, OTT, IPTV, DRM, digital right management, Video protection, encryption, download helper, monetize, avod, svod
 Requires at least: 4.0
-Tested up to: 5.3
+Tested up to: 5.3.1
 Requires PHP: 5.6
 Stable tag: 4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Amazon Web Services, Roku, FireTV & WordPress Video Streaming
+Amazon Web Services (AWS), Roku, FireTV, Video Streaming
 
 == Description ==
 
-= DRM Protected Video Streaming‎: =
+**COMPLETELY REBUILT AND UPDATED 2019**
+
+= Monetize Your Media: =
+
+**AVOD: Advertising Video On Demand With AWS & WordPress**
+
+**[Watch Tutorial](https://www.youtube.com/watch?v=OpIQWSKyAI0 "Watch Tutorial")**
+
+**SVOD - Subscription Video On Demand AWS, Woocommerce, WordPress**
+
+**[Watch Tutorial](https://www.youtube.com/watch?v=CDewsYGlDPU "Watch Tutorial")**
 
 Prevent your video content from being downloaded with our AWS DRM Static Key security. [View Example](https://s3bubble.com/documentation/aws-mediaconvert-drm-hls-with-statickey/ "View Example")
 
 Sign up for a 10 free trial.
 
 **S3Bubble Sign Up: [View Website](https://s3bubble.com "View Website")**
+
+= Dashboard Features: =
+* AWS Media Convert (Media encoding)
+* AWS Media Live (Broadcast level live streaming)
+* AWS Media Package (Media distribution)
+* AWS Media Tailor (Ads)
+* Server-Side Ad Insertion (SSAI)
+* VAST/VPAID Advertising Integration
+* Captions/Subtitles
+* (HLS) Adaptive Bitrate Streaming
+* Video Thumbnails
+* DRM Protected Video Streaming‎
+
+Download the plugin or Sign Up for an account at [S3Bubble](https://s3bubble.com "S3bubble")
 
 **WordPress, AWS, Roku, FireTV Video Streaming Theme: [View Example](https://streamiumtheme.com "View Website")**
 
@@ -39,25 +63,11 @@ Sign up for a 10 free trial.
 * Advanced Search
 * HLS Adaptive Bitrate, DASH, MP4 Support
 
-= Dashboard Features: =
-* AWS Media Convert (Media encoding)
-* AWS Media Live (Broadcast level live streaming)
-* AWS Media Package (Media distribution)
-* AWS Media Tailor (Ads)
-* Server-Side Ad Insertion (SSAI)
-* VAST/VPAID Advertising Integration
-* Captions/Subtitles
-* (HLS) Adaptive Bitrate Streaming
-* Video Thumbnails
-* DRM Protected Video Streaming‎
-
-Download the plugin or Sign Up for an account at [S3Bubble](https://s3bubble.com "S3bubble")
-
 == Installation ==
 
 * Watch Our Must See Explainer Video
 
-[youtube http://www.youtube.com/watch?v=bAV6_lv4uus]
+[youtube http://www.youtube.com/watch?v=CDewsYGlDPU]
 
 == Frequently Asked Questions ==
 
