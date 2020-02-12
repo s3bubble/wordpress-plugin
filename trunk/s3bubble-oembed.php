@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: WordPress Video SVOD, AVOD, VOD
+Plugin Name: WordPress Video & Audio Streaming SVOD, AVOD
 Plugin URI: https://s3bubble.com
 Description: Amazon Web Services (AWS), Roku, FireTV, Video Streaming
 Version: 6.0

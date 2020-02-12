@@ -1,9 +1,9 @@
-﻿=== WordPress Video SVOD, AVOD, VOD ===
+﻿=== WordPress Video & Audio Streaming SVOD, AVOD ===
 Contributors: S3Bubble
 Donate link: https://s3bubble.com
-Tags: Amazon Web Services, Woocommerce, MediaConvert, MediaLive, MediaTailor, MediaPackage, Roku, FireTv, HTML5 Player, Video, Media Streaming, Secure Streaming,Video Player, Security, Adaptive Bitrate, Cloudfront, AWS, CDN, VideoJS, HLS, Dash, Youtube, Vimeo, On Demand streaming, Live Broadcasting, MediaLive, MediaConvert, SSAI, OTT, IPTV, DRM, digital right management, Video protection, encryption, download helper, monetize, avod, svod
+Tags: Amazon Web Services, Woocommerce, MediaConvert, MediaLive, MediaTailor, MediaPackage, Roku, FireTv, HTML5 Player, Video, Media Streaming, Secure Streaming,Video Player, Security, Adaptive Bitrate, Cloudfront, AWS, CDN, VideoJS, HLS, Dash, Youtube, Vimeo, On Demand streaming, Live Broadcasting, MediaLive, MediaConvert, SSAI, OTT, IPTV, DRM, digital right management, Video protection, encryption, download helper, monetize, avod, svod, bifs
 Requires at least: 4.0
-Tested up to: 5.3.1
+Tested up to: 5.3.2
 Requires PHP: 5.6
 Stable tag: 4.0
 License: GPLv2 or later
@@ -13,7 +13,7 @@ Amazon Web Services (AWS), Roku, FireTV, Video Streaming
 
 == Description ==
 
-**COMPLETELY REBUILT AND UPDATED 2019**
+**COMPLETELY REBUILT AND UPDATED 2020**
 
 = Monetize Your Media: =
 
